@@ -33,13 +33,13 @@ export default function Search() {
         if (searchData) {
             setflatData([]);
             setsearched(true);
-            console.log(flatData.length = "0000000000000000000000000000000000000000000000000000000000000000000000000")
-            console.log("__________________________________________________________________")
+            // console.log(flatData.length = "0000000000000000000000000000000000000000000000000000000000000000000000000")
+            // console.log("__________________________________________________________________")
             searchStory(searchData);
             seacrhAuthor(searchData);
             searchMoral(searchData);
             searchTitle(searchData);
-            console.log(flatData.length);
+            // console.log(flatData.length);
         } else {
             ref.current.blur();
             ToastAndroid.show("First Enter Something", ToastAndroid.SHORT);
@@ -79,7 +79,7 @@ export default function Search() {
     }
 
     useEffect(() => {
-        console.log(flatData.length)
+        // console.log(flatData.length)
     }, [])
 
     return (
@@ -117,7 +117,6 @@ export default function Search() {
                         renderItem={({ item }) => {
                             return (
                                 < TouchableOpacity style={{ backgroundColor: "#000", borderRadius: 6, margin: 5, padding: 10 }} key={item.story + item.author} onPress={() => { setread(item), transition(); }}>
-                                    {console.log(item)}
                                     <View style={{ flexDirection: "row" }}>
                                         <Text style={{ color: "#f00" }}>Author:{" "} </Text>
                                         <Text style={{ color: "#0f0" }}>{item.author}</Text>
